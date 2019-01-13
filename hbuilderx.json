@@ -1,0 +1,11 @@
+{
+	"homepage": "http://www.dcloud.io/hbuilderx.html",
+	"version": "1.2.1.20181126",
+	"description": "",
+	"license": {
+		"identifier": "Freeware"
+	},
+	"url": "http://download.dcloud.net.cn/HBuilderX.1.2.1.20181126.zip",
+	"hash": "sha1:F432180DEFF770CF2757ABCF28D4D764F29CF698",
+	"extract_dir": "HBuilderX"
+}
