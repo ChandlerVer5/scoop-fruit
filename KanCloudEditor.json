@@ -5,7 +5,7 @@
 	"license": {
 		"identifier": "Freeware"
 	},
-	"url": "https://app.kancloud.cn/desktop/KanCloudEditor-Setup-1.1.6.exe#/dl.7z",
+	"url": "https://app.kancloud.cn/desktop/KanCloudEditor-Setup-1.1.6.exe",
 	"autoupdate": {
         "url": "https://app.kancloud.cn/desktop/KanCloudEditor-Setup-$version.exe"
     }
