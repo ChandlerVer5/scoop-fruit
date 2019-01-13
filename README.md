@@ -61,5 +61,5 @@ hello # -> you should see 'Hello, <windows-username>!'
 ```
 
 # Refs
-https://github.com/lukesampson/scoop/wiki/Buckets
-https://github.com/rasa/scoop-directory/blob/master/by-score.md
+* https://github.com/lukesampson/scoop/wiki/Buckets
+* https://github.com/rasa/scoop-directory/blob/master/by-score.md
