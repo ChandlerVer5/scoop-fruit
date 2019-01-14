@@ -6,8 +6,6 @@
 		"identifier": "Freeware"
 	},
 	"url": "https://app.kancloud.cn/desktop/KanCloudEditor-Setup-1.1.6.exe#/dl.7z",
-    "pre_install": "extract_7zip \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
 	"bin": "KanCloud Editor.exe",
     "persist": "data",
     "shortcuts": [
@@ -19,6 +17,18 @@
     "checkver": {
         "url": "https://www.kancloud.cn/app",
         "re": "<a href=\"https://app.kancloud.cn/desktop/KanCloudEditor-Setup-([\\d\\.]+).exe\" class"
+    },
+    "pre_install":[
+        "extract_7zip \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+        "cmd /c mklink /J \"$env:APPDATA\\KanCloud Editor\" \"$persist_dir\\data\""
+    ],
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
+    "uninstaller": {
+        "script": [
+            "if ((Get-Item -Path \"$env:APPDATA\\KanCloud Editor\" -Force).LinkType -eq \"Junction\") {",
+            "   Remove-Item \"$env:APPDATA\\KanCloud Editor\" -Force -Recurse",
+            "}"
+        ]
     },
 	"autoupdate": {
         "url": "https://app.kancloud.cn/desktop/KanCloudEditor-Setup-$version.exe"
