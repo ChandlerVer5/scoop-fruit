@@ -7,6 +7,12 @@
     "checkver": {
         "github": "https://github.com/cnjackchen/my-chrome/"
     },
+    "shortcuts": [
+        [ 
+            "MyChrome.exe",
+            "MyChrome"
+        ]
+    ],
     "autoupdate": {
         "url":"https://github.com/cnjackchen/my-chrome/releases/download/v3.8.1/MyChrome_v$version_x64.7z"
     }
