@@ -27,6 +27,7 @@
         "script": [
             "if ((Get-Item -Path \"$env:APPDATA\\KanCloud Editor\" -Force).LinkType -eq \"Junction\") {",
             "   Remove-Item \"$env:APPDATA\\KanCloud Editor\" -Force -Recurse",
+            "   Remove-Item \"$persist_dir\" -Force -Recurse",
             "}"
         ]
     },
