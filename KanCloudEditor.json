@@ -6,6 +6,8 @@
 		"identifier": "Freeware"
 	},
 	"url": "https://app.kancloud.cn/desktop/KanCloudEditor-Setup-1.1.6.exe#/dl.7z",
+    "pre_install": "extract_7zip \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
 	"bin": "KanCloud Editor.exe",
     "shortcuts": [
         [ 
