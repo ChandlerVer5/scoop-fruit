@@ -13,8 +13,9 @@ versions
 ```
 
 然后安装下列必备软件：
-[mychrome](https://github.com/cnjackchen/my-chrome/releases)
+
 ```
+  [mychrome](https://github.com/cnjackchen/my-chrome/releases)
   android-sdk 4333796 *global* [extras]
   aria2 1.34.0-1
   bulk-crap-uninstaller 4.12.1 *global* [extras]
@@ -42,9 +43,9 @@ versions
 just-flutter : no dependencies
  
 # TODO
-1. mychrome
+1. ~~mychrome~~
 2. neteasemusic
-3. kancloud
+3. ~~kancloud~~
 
 # How to use
 1. Configure Scoop to use your new bucket:
