@@ -44,7 +44,7 @@ just-flutter : no dependencies
  
 # TODO
 1. ~~mychrome~~
-2. neteasemusic
+2. ~~neteasemusic~~
 3. ~~kancloud~~
 
 # How to use
