@@ -1,21 +1,24 @@
 # scoop-fruit
 some app I need, scoop app. just it.
 
-# windows¿ª·¢»·¾³ÅäÖÃ
-Ö÷ÒªÍ¨¹ı [Scoop](https://github.com/lukesampson/scoop) °²×°ÏàÓ¦¿ª·¢¹¤¾ß£¡
+MAYBE FOR CHINESE PEOPLE
 
-ÏÈ£º`scoop bucket add extras`
+# windowså¼€å‘ç¯å¢ƒé…ç½®
+ä¸»è¦é€šè¿‡ [Scoop](https://github.com/lukesampson/scoop) å®‰è£…ç›¸åº”å¼€å‘å·¥å…·ï¼
+
+å…ˆï¼š`scoop bucket add extras`
 ```
-¦Ë scoop bucket list
+Î» scoop bucket list
 extras
 java
 versions
+scoop-fruit
 ```
 
-È»ºó°²×°ÏÂÁĞ±Ø±¸Èí¼ş£º
+ç„¶åå®‰è£…ä¸‹åˆ—å¿…å¤‡è½¯ä»¶ï¼š
 
 ```
-  [mychrome](https://github.com/cnjackchen/my-chrome/releases)
+  mychrome *global* [scoop-fruit]
   android-sdk 4333796 *global* [extras]
   aria2 1.34.0-1
   bulk-crap-uninstaller 4.12.1 *global* [extras]
@@ -39,28 +42,27 @@ versions
   yarn 1.12.3
 ```
 
+# å¦‚ä½•ä½¿ç”¨
+1. æ·»åŠ  `scoop-fruit`:
+```
+scoop bucket add my-bucket https://github.com/ChandlerVer5/scoop-fruit
+```
+
+2. ä¸‹è½½å¹¶æ£€æŸ¥æ˜¯å¦å·¥ä½œ:
+```
+scoop bucket list # -> you should see 'scoop-fruit'
+scoop search neteasemusic # -> you should see neteasemusic listed under, 'scoop-fruit bucket:'
+scoop install neteasemusic # -> you have DONE!Yeah~
+```
+
 # list apps
 just-flutter : no dependencies
  
-# TODO
+# TODOï¼ˆDONEï¼ï¼‰
 1. ~~mychrome~~
-2. ~~neteasemusic~~
+2. ~~ç½‘æ˜“äº‘éŸ³ä¹~~
 3. ~~kancloud~~
 
-# How to use
-1. Configure Scoop to use your new bucket:
-```
-scoop bucket add my-bucket https://github.com/<your-username>/my-bucket
-```
-
-2.Check that it works:
-```
-scoop bucket list # -> you should see 'my-bucket'
-scoop search hello # -> you should see hello listed under, 'my-bucket bucket:'
-scoop install hello
-hello # -> you should see 'Hello, <windows-username>!'
-```
-
-# Refs
+# å‚è€ƒ
 * https://github.com/lukesampson/scoop/wiki/Buckets
 * https://github.com/rasa/scoop-directory/blob/master/by-score.md

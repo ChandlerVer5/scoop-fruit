@@ -1,0 +1,38 @@
+{
+	"homepage": "https://tim.qq.com/",
+	"version": "2.3.1_3",
+	"description": "TIM，QQ办公简洁版，是一款专注于团队办公协作的跨平台沟通工具。登录后，你的QQ好友都在，提供云文件、在线文档、邮件、日程、收藏等好用的办公功能，界面简洁清晰，QQ好友和消息无缝同步。",
+	"license": {
+		"identifier": "Freeware"
+	},
+	"url": "https://qd.myapp.com/myapp/qqteam/tim/down/TIM2.3.1_3.exe#/dl.7z",
+	"bin": "bin\\TIM.exe",
+    "persist": "RoamingData",
+    "shortcuts": [
+        [ 
+        	"TIM.exe",
+            "TIM"
+        ]
+    ],
+    "checkver": {
+        "url": "https://tim.qq.com/download.html",
+        "re": "Windows版</div>
+                        <div class=\"d-item-desc\">版本([\\d\\.]+) <sp"
+    },
+    "pre_install":[
+        "cmd /c mklink /J \"$env:APPDATA\\Tencent\\TIM\" \"$persist_dir\\RoamingData\"",
+    ],
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
+    "uninstaller": {
+        "script": [
+            "if ((Get-Item -Path \"$env:APPDATA\\Tencent\\TIM\" -Force).LinkType -eq \"Junction\") {",
+            "   Remove-Item \"$env:APPDATA\\Tencent\\TIM\" -Force -Recurse",
+            "   Remove-Item \"$env:USERPROFILE\\Documents\\Tencent Files\" -Force -Recurse",
+            "   Remove-Item \"$persist_dir\" -Force -Recurse",
+            "}"
+        ]
+    },
+	"autoupdate": {
+        "url": "https://qd.myapp.com/myapp/qqteam/tim/down/TIM$version.exe"
+    }
+}
