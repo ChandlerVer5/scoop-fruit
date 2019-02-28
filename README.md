@@ -45,7 +45,7 @@ scoop-fruit
 # 如何使用
 1. 添加 `scoop-fruit`:
 ```
-scoop bucket add my-bucket https://github.com/ChandlerVer5/scoop-fruit
+scoop bucket add scoop-fruit https://github.com/ChandlerVer5/scoop-fruit
 ```
 
 2. 下载并检查是否工作:
