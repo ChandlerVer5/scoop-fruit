@@ -1,11 +1,11 @@
 {
 	"homepage": "https://www.kancloud.cn/app",
-	"version": "1.1.6",
+	"version": "1.1.7",
 	"description": "KanCloud Editor for md post editor!",
 	"license": {
 		"identifier": "Freeware"
 	},
-	"url": "https://app.kancloud.cn/desktop/KanCloudEditor-Setup-1.1.6.exe#/dl.7z",
+	"url": "https://www.kancloud.cn/app/KanCloudEditor-Setup-$version.exe#/dl.7z",
 	"bin": "KanCloud Editor.exe",
     "persist": "RoamingData",
     "shortcuts": [

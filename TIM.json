@@ -9,10 +9,10 @@
 	"bin": "bin\\TIM.exe",
     "persist": "RoamingData",
     "shortcuts": [
-        [ 
+        	[
         	"TIM.exe",
             "TIM"
-        ]
+            ]
     ],
     "checkver": {
         "url": "https://tim.qq.com/download.html",
@@ -20,7 +20,7 @@
                         <div class=\"d-item-desc\">版本([\\d\\.]+) <sp"
     },
     "pre_install":[
-        "cmd /c mklink /J \"$env:APPDATA\\Tencent\\TIM\" \"$persist_dir\\RoamingData\"",
+        "cmd /c mklink /J \"$env:APPDATA\\Tencent\\TIM\" \"$persist_dir\\RoamingData\""
     ],
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
     "uninstaller": {
