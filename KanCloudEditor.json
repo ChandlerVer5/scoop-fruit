@@ -5,7 +5,7 @@
 	"license": {
 		"identifier": "Freeware"
 	},
-	"url": "https://www.kancloud.cn/app/KanCloudEditor-Setup-1.1.7.exe#/dl.7z",
+	"url": "https://app.kancloud.cn/desktop/KanCloudEditor-Setup-1.1.7.exe#/dl.7z",
 	"bin": "KanCloud Editor.exe",
     "persist": "RoamingData",
     "shortcuts": [
