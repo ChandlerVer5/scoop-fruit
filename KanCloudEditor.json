@@ -22,7 +22,7 @@
         "extract_7zip \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
         "cmd /c mklink /J \"$env:APPDATA\\KanCloud Editor\" \"$persist_dir\\RoamingData\""
     ],
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall KanCloud Editor.exe\" -Force -Recurse",
     "uninstaller": {
         "script": [
             "if ((Get-Item -Path \"$env:APPDATA\\KanCloud Editor\" -Force).LinkType -eq \"Junction\") {",

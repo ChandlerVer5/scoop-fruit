@@ -57,6 +57,7 @@ scoop install neteasemusic # -> you have DONE!Yeah~
 
 # list apps
 just-flutter : no dependencies
+
  
 # TODO（DONE！）
 1. ~~mychrome~~
@@ -64,5 +65,6 @@ just-flutter : no dependencies
 3. ~~kancloud~~
 
 # 参考
-* https://github.com/lukesampson/scoop/wiki/Buckets
-* https://github.com/rasa/scoop-directory/blob/master/by-score.md
+* 查找软件：https://github.com/rasa/scoop-directory/blob/master/by-score.md
+* 国内大多数软件：https://github.com/h404bi/dorado/
+* scoop 文档：https://github.com/lukesampson/scoop/wiki/Buckets

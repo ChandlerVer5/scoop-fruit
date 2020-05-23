@@ -1,0 +1,49 @@
+{
+	"homepage": "https://u.tools/",
+	"version": "1.0.6-beta",
+	"description": "Your productive tools set and launcher.",
+	 "license": "Unknown",
+	 "architecture": {
+        "64bit": {
+            "url": "https://resource.u-tools.cn/currentversion/uTools-1.0.6-beta.exe#/dl.7z",
+            "hash": "sha512:0ded9761418ed8ac4aba6178162bed88864339d3afd8dbdbd2f22c7823d49cfaee28ae98218c9796c4fb8e22db0c462d3d28babc1d7f0ba420586e2f9d299224",
+            "installer": {
+                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
+            }
+        },
+        "32bit": {
+            "url": "https://resource.u-tools.cn/currentversion/uTools-1.0.6-beta-ia32.exe#/dl.7z",
+            "hash": "sha512:22fcaa71a967e3b129d8b19a6c5309da890186282f00df2d30bd202d78bed4ed016216eef459c788ae055dc8cc68dc8ffa0e7a76f47517cba1883350041da969",
+            "installer": {
+                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
+            }
+        }
+    },
+	"bin": "uTools.exe",
+    "persist":["RoamingData"],
+    "shortcuts": [
+        [ 
+        	"uTools.exe",
+            "uTools"
+        ]
+    ],
+    "checkver": {
+        "url": "https://u.tools/download.html",
+        "re": "<h6 class=\"text-muted\">版本号: <span class=\"v-win64\">([\\d\\.]+)-beta</span>"
+    },
+    "pre_install":[
+        "cmd /c mklink /J \"$env:APPDATA\\uTools\" \"$persist_dir\\RoamingData\""
+    ],
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall uTools.exe\" -Force -Recurse",
+    "uninstaller": {
+        "script": [
+            "if ((Get-Item -Path \"$env:APPDATA\\uTools\" -Force).LinkType -eq \"Junction\") {",
+            "   Remove-Item \"$env:APPDATA\\uTools\" -Force -Recurse",
+            "   Remove-Item \"$persist_dir\" -Force -Recurse",
+            "}"
+        ]
+    },
+	"autoupdate": {
+        "url": "https://resource.u-tools.cn/currentversion/uTools-$version-beta.exe"
+    }
+}
