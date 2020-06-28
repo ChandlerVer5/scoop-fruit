@@ -1,19 +1,18 @@
 {
-	"homepage": "https://u.tools/",
-	"version": "1.0.7-beta",
+	"homepage": "https://www.u.tools/",
+	"version": "1.1.3",
 	"description": "Your productive tools set and launcher.",
 	 "license": "Unknown",
 	 "architecture": {
         "64bit": {
-            "url": "https://resource.u-tools.cn/currentversion/uTools-1.0.7-beta.exe#/dl.7z",
-            "hash": "sha512:0ded9761418ed8ac4aba6178162bed88864339d3afd8dbdbd2f22c7823d49cfaee28ae98218c9796c4fb8e22db0c462d3d28babc1d7f0ba420586e2f9d299224",
+            "url": "https://resource.u-tools.cn/currentversion/uTools-1.1.3.exe#/dl.7z",
+            "hash": "ba43521bab0f84ac0d50cd467964b0919c7dc0ddec1e0ec940fb52d96420e1ec",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
             }
         },
         "32bit": {
-            "url": "https://resource.u-tools.cn/currentversion/uTools-1.0.7-beta-ia32.exe#/dl.7z",
-            "hash": "sha512:22fcaa71a967e3b129d8b19a6c5309da890186282f00df2d30bd202d78bed4ed016216eef459c788ae055dc8cc68dc8ffa0e7a76f47517cba1883350041da969",
+            "url": "https://res.u-tools.cn/currentversion/uTools-1.1.3-ia32.exe#/dl.7z",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
             }
@@ -28,8 +27,8 @@
         ]
     ],
     "checkver": {
-        "url": "https://u.tools/download.html",
-        "re": "<h6 class=\"text-muted\">版本号: <span class=\"v-win64\">([\\d\\.]+)-beta</span>"
+        "url": "https://www.u.tools/download.html",
+        "re": "版本号: ([\\d.]+)"
     },
     "pre_install":[
         "cmd /c mklink /J \"$env:APPDATA\\uTools\" \"$persist_dir\\RoamingData\""
@@ -44,6 +43,6 @@
         ]
     },
 	"autoupdate": {
-        "url": "https://resource.u-tools.cn/currentversion/uTools-$version-beta.exe"
+        "url": "https://res.u-tools.cn/currentversion/uTools-$version.exe"
     }
 }
