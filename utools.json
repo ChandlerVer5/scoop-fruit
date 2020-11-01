@@ -5,14 +5,14 @@
 	 "license": "Unknown",
 	 "architecture": {
         "64bit": {
-            "url": "https://resource.u-tools.cn/currentversion/uTools-1.1.3.exe#/dl.7z",
+            "url": "https://res.u-tools.cn/currentversion/uTools-1.3.3.exe#/dl.7z",
             "hash": "ba43521bab0f84ac0d50cd467964b0919c7dc0ddec1e0ec940fb52d96420e1ec",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
             }
         },
         "32bit": {
-            "url": "https://res.u-tools.cn/currentversion/uTools-1.1.3-ia32.exe#/dl.7z",
+            "url": "https://res.u-tools.cn/currentversion/uTools-1.3.3-ia32.exe#/dl.7z",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
             }
