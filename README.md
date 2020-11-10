@@ -6,12 +6,22 @@ MAYBE FOR CHINESE PEOPLE
 # windows开发环境配置
 主要通过 [Scoop](https://github.com/lukesampson/scoop) 安装相应开发工具！
 
-先：`scoop bucket add extras`
+scoop 内置了 main；我们还需要安装：
+
+```shell
+scoop bucket add extras
+scoop bucket add java
+scoop bucket add https://github.com/h404bi/dorado
+scoop bucket add https://github.com/chandlerver5/scoop-fruit
 ```
+
+查看：
+```shell
 λ scoop bucket list
+dorado		
 extras
 java
-versions
+main
 scoop-fruit
 ```
 
@@ -54,6 +64,11 @@ scoop bucket list # -> you should see 'scoop-fruit'
 scoop search neteasemusic # -> you should see neteasemusic listed under, 'scoop-fruit bucket:'
 scoop install neteasemusic # -> you have DONE!Yeah~
 ```
+
+## notepad3
+`notepad3` 目录下是 notepad3 的注册表文件
+1. 用来添加右键使用 notepad3 打开功能（带恢复）；替换系统 notepad 功能（带恢复），来自：[Replacing Windows Notepad with Notepad2](http://code.kliu.org/misc/notepad2/)
+2. 内部文件的 notepad3 路径可能需要修改！
 
 # list apps
 just-flutter : no dependencies
