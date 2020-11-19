@@ -65,11 +65,6 @@ scoop search neteasemusic # -> you should see neteasemusic listed under, 'scoop-
 scoop install neteasemusic # -> you have DONE!Yeah~
 ```
 
-## notepad3
-`notepad3` 目录下是 notepad3 的注册表文件
-1. 用来添加右键使用 notepad3 打开功能（带恢复）；替换系统 notepad 功能（带恢复），来自：[Replacing Windows Notepad with Notepad2](http://code.kliu.org/misc/notepad2/)
-2. 内部文件的 notepad3 路径可能需要修改！
-
 # list apps
 just-flutter : no dependencies
 
